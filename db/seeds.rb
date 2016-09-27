@@ -1,4 +1,7 @@
-Airport.delete_all
+Passenger.delete_all
+Booking.delete_all
+
+Airport.delete_all   
 lax = Airport.create(code: "LAX", city: "Los Angeles")
 sfo = Airport.create(code: "SFO", city: "San Francisco")
 iad = Airport.create(code: "IAD", city: "Washington D.C.")
