@@ -1,0 +1,39 @@
+<% provide(:title, 'Booking') %>
+<%= link_to "<< Back", root_url %>
+<h1>Booking Page</h1>
+
+<fieldset>
+	<legend>Trip Details</legend>
+	<h3>Flight <%= @flight.id %></h3>
+	<h3>
+		<%= @flight.from_airport.code %> -> <%= @flight.to_airport.code %>
+		<small><%= @flight.from_airport.city %> to <%= @flight.to_airport.city %></small>
+	</h3>
+	<p><%= @flight.date.strftime("%A, %B %d, %Y") %></p>
+</fieldset>
+
+<div class="row">
+	<div class="large-6 columns">
+		<%= form_for(@booking) do |f| %>
+			<%= f.hidden_field :flight_id %>
+			<fieldset>
+				<legend>Passengers Information</legend>
+				<%= f.fields_for :passengers do |passenger| %>
+					<h3>Passenger Details</h3>
+					<div class="row">
+						<div class="large-6 columns">
+						Name:
+							<%= passenger.text_field :name %>
+						</div>
+						<div class="large-6 columns">
+						Email:
+							<%= passenger.text_field :email %>
+						</div>
+						<hr>
+					</div>
+				<% end %>
+			</fieldset>
+			<%= f.submit "Book Flight", class: "button" %>
+		<% end %>
+	</div>
+</div>

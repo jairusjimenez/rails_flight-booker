@@ -1,0 +1,9 @@
+<% provide(:title, 'Search Flights') %>
+<h1>Flights</h1>
+<%= link_to "Reload", root_url %> <br>
+
+<%= render 'search' %>
+
+<% if !@flights.none? %>
+	<%= render 'search_results' %>
+<% end %>
