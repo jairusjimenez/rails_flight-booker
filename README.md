@@ -1,24 +1,13 @@
-# README
+##Project: Flight Booker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+My implementation of the Flight Booker project from the Odin Curriculum.
 
-* Ruby version
+Project focus: building advanced forms with search and nested attributes.
 
-* System dependencies
+##Objective
+>In this project, you'll get a chance to tackle some more advanced forms. This is the kind of thing you'll have to work with when handling user orders for anything more complicated than an e-book.
 
-* Configuration
+Build a flight booker, where user selects flight based on date, departure and arrival airports, and # of passengers.  User enters passenger detail on booking page and receives confirmation.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+View: [Heroku](https://fathomless-tor-56042.herokuapp.com/)
